@@ -998,80 +998,48 @@
             font-size: 18px;
             font-weight: 800;
             color: var(--primary);
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
-        .contact-row {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-            font-size: 14px;
+        .contact-card p {
+            font-size: 15px;
+            color: var(--gray);
+            line-height: 1.7;
         }
 
-        .contact-row:last-child {
-            border-bottom: none;
-        }
-
-        .contact-row .ci {
-            font-size: 22px;
-            width: 32px;
-            text-align: center;
-        }
-
-        .contact-row a {
-            color: var(--primary-light);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-row a:hover {
-            color: var(--gold);
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 16px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            border: 1.5px solid #ddd;
-            border-radius: 10px;
-            padding: 10px 14px;
+        .contact-input {
+            width: 100%;
+            margin: 16px 0 12px;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
             font-family: inherit;
             font-size: 14px;
-            outline: none;
             transition: all 0.3s ease;
-            background: var(--cream);
-            color: var(--black);
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: var(--primary-light);
-            box-shadow: 0 0 0 3px rgba(26, 107, 64, 0.12);
+        .contact-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(13, 74, 47, 0.1);
         }
 
-        .contact-form textarea {
-            min-height: 100px;
+        .contact-input textarea {
             resize: vertical;
+            min-height: 120px;
         }
 
         .submit-btn {
             background: var(--primary);
-            color: #fff;
+            color: var(--white);
             border: none;
-            border-radius: 10px;
-            padding: 14px;
+            padding: 12px 32px;
+            border-radius: 8px;
             font-family: inherit;
-            font-size: 16px;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-size: 14px;
         }
 
         .submit-btn:hover {
@@ -1079,436 +1047,37 @@
             transform: translateY(-2px);
         }
 
-        .form-msg {
-            text-align: center;
-            font-size: 14px;
-            color: var(--primary-light);
-            margin-top: 8px;
-            display: none;
-            font-weight: 600;
+        .submit-btn:active {
+            transform: translateY(0);
         }
 
-        /* ===== Footer ===== */
-        footer {
-            background: var(--primary-dark);
-            color: rgba(255, 255, 255, 0.7);
-            text-align: center;
-            padding: 28px 16px;
-            font-size: 13px;
-            line-height: 2;
-        }
-
-        footer strong {
-            color: var(--gold-light);
-        }
-
-        /* ===== Admin ===== */
-        .admin-trigger {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            background: var(--primary-dark);
-            color: var(--gold-light);
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 22px;
-            cursor: pointer;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .admin-trigger:hover {
-            transform: scale(1.08);
-            background: var(--primary-light);
-        }
-
-        #admin-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 4000;
-            background: rgba(0, 0, 0, 0.6);
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(6px);
-        }
-
-        #admin-overlay.open {
-            display: flex;
-        }
-
-        .admin-panel {
-            background: var(--white);
-            width: min(540px, 94vw);
-            max-height: 88vh;
-            overflow-y: auto;
-            border-radius: var(--radius);
-            padding: 30px;
-            box-shadow: 0 8px 48px rgba(0, 0, 0, 0.3);
-            transition: background var(--transition);
-        }
-
-        .admin-panel h2 {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .admin-close {
-            float: right;
-            background: none;
-            border: none;
-            font-size: 26px;
-            cursor: pointer;
-            color: var(--gray);
-            transition: all 0.3s ease;
-        }
-
-        .admin-close:hover {
-            transform: rotate(90deg);
-        }
-
-        .admin-section {
-            margin-bottom: 28px;
-        }
-
-        .admin-section h3 {
-            font-size: 16px;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 12px;
-            border-bottom: 2px solid var(--gold);
-            padding-bottom: 6px;
-        }
-
-        .admin-field {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-bottom: 10px;
-        }
-
-        .admin-field label {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--gray);
-        }
-
-        .admin-field input,
-        .admin-field textarea,
-        .admin-field select {
-            border: 1.5px solid #ddd;
-            border-radius: 8px;
-            padding: 9px 12px;
-            font-family: inherit;
-            font-size: 14px;
-            outline: none;
-            background: var(--cream);
-            color: var(--black);
-            transition: all 0.3s ease;
-        }
-
-        .admin-field input:focus,
-        .admin-field textarea:focus {
-            border-color: var(--primary-light);
-        }
-
-        .admin-field textarea {
-            min-height: 70px;
-            resize: vertical;
-        }
-
-        .admin-btn {
-            background: var(--primary);
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 22px;
-            font-family: inherit;
-            font-size: 14px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 4px;
-        }
-
-        .admin-btn:hover {
-            background: var(--primary-light);
-        }
-
-        .admin-btn.danger {
-            background: #c0392b;
-        }
-
-        .admin-btn.danger:hover {
-            background: #e74c3c;
-        }
-
-        .img-upload-area {
-            border: 2px dashed #bbb;
-            border-radius: 10px;
-            padding: 18px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: var(--cream);
-            position: relative;
-        }
-
-        .img-upload-area:hover {
-            border-color: var(--primary-light);
-            background: rgba(26, 107, 64, 0.05);
-        }
-
-        .img-upload-area input[type="file"] {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            cursor: pointer;
-            width: 100%;
-            height: 100%;
-        }
-
-        .img-upload-area .up-icon {
-            font-size: 30px;
-            margin-bottom: 4px;
-        }
-
-        .img-upload-area p {
-            font-size: 13px;
-            color: var(--gray);
-            margin: 0;
-        }
-
-        .img-preview {
-            width: 100%;
-            max-height: 160px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-top: 10px;
-            display: none;
-        }
-
-        .slide-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .slide-edit-row {
-            background: var(--cream);
-            border-radius: 8px;
-            padding: 10px 12px;
-            font-size: 13px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-        }
-
-        .slide-edit-row .stitle {
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .row-btns {
-            display: flex;
-            gap: 6px;
-        }
-
-        .mini-btn {
-            background: none;
-            border: 1.5px solid #ccc;
-            border-radius: 6px;
-            padding: 4px 12px;
-            font-size: 12px;
-            cursor: pointer;
-            font-family: inherit;
-            transition: all 0.3s ease;
-        }
-
-        .mini-btn.edit {
-            border-color: var(--primary-light);
-            color: var(--primary-light);
-        }
-
-        .mini-btn.del {
-            border-color: #c0392b;
-            color: #c0392b;
-        }
-
-        .mini-btn:hover {
-            opacity: 0.7;
-        }
-
-        .admin-save-notice {
-            color: var(--primary-light);
-            font-size: 14px;
-            margin-top: 8px;
-            display: none;
-            text-align: center;
-            font-weight: 600;
-        }
-         /* ===== Login Modal ===== */
-        #login-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 6000;
-            background: rgba(0, 0, 0, 0.7);
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(8px);
-        }
-
-        #login-overlay.open {
-            display: flex;
-        }
-
-        .login-box {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 36px 30px;
-            width: min(380px, 92vw);
-            box-shadow: 0 8px 48px rgba(0, 0, 0, 0.4);
-            text-align: center;
-            transition: background var(--transition);
-        }
-
-        .login-box .lock-icon {
-            font-size: 48px;
-            margin-bottom: 12px;
-        }
-
-        .login-box h3 {
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .login-box p {
-            font-size: 14px;
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
-
-        .login-field {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-bottom: 14px;
-            text-align: left;
-        }
-
-        .login-field label {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--gray);
-        }
-
-        .login-field input {
-            border: 1.5px solid #ddd;
-            border-radius: 8px;
-            padding: 10px 14px;
-            font-family: inherit;
-            font-size: 14px;
-            outline: none;
-            background: var(--cream);
-            color: var(--black);
-            transition: all 0.3s ease;
-        }
-
-        .login-field input:focus {
-            border-color: var(--primary-light);
-        }
-
-        .login-btn {
-            width: 100%;
-            background: var(--primary);
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 12px;
-            font-family: inherit;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 4px;
-        }
-
-        .login-btn:hover {
-            background: var(--primary-light);
-        }
-
-        .login-error {
-            color: #c0392b;
-            font-size: 13px;
-            margin-top: 10px;
-            display: none;
-            background: rgba(192, 57, 43, 0.08);
-            border-radius: 6px;
-            padding: 8px;
-        }
-
-        .login-cancel {
-            background: none;
-            border: none;
-            color: var(--gray);
-            font-family: inherit;
-            font-size: 14px;
-            cursor: pointer;
-            margin-top: 12px;
-            display: block;
-            width: 100%;
-        }
-
-        .login-cancel:hover {
-            color: var(--black);
-        }
-
-        /* ===== Mobile ===== */
-        @media (max-width: 640px) {
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
             .nav-links {
                 display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 62px;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                padding: 12px;
-                box-shadow: var(--shadow);
-                z-index: 998;
-                border-radius: 0 0 var(--radius) var(--radius);
-                gap: 2px;
-            }
-
-            [data-theme="dark"] .nav-links {
-                background: var(--white);
-            }
-
-            .nav-links.open {
-                display: flex;
             }
 
             .hamburger {
                 display: flex;
             }
 
-            .stats-row .stat-box {
-                min-width: 100px;
-                padding: 16px 8px;
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                box-shadow: var(--shadow);
+                border-radius: 0 0 8px 8px;
+                gap: 4px;
+                padding: 12px 0;
+                z-index: 999;
             }
 
-            .profile-strip {
-                padding: 24px 16px;
-                gap: 16px;
+            .slide {
+                min-height: 280px;
             }
 
             .profile-photo {
@@ -1516,806 +1085,457 @@
                 height: 100px;
             }
 
-            .slide-content {
-                padding: 20px 16px 48px;
-            }
-
-            .slide-arrow {
-                width: 34px;
-                height: 34px;
-                font-size: 18px;
-            }
-
-            .countdown-item {
-                min-width: 50px;
-                padding: 6px 12px;
-            }
-
-            .countdown-item .num {
-                font-size: 22px;
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            }
-
-            .manifesto-item {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .manifesto-num {
-                font-size: 24px;
-                min-width: auto;
-            }
-
-            .admin-panel {
-                padding: 20px;
-            }
-
-            .theme-toggle {
-                bottom: 72px;
-                width: 42px;
-                height: 42px;
-                font-size: 18px;
-            }
-
-            .admin-trigger {
-                width: 44px;
-                height: 44px;
-                font-size: 18px;
-                bottom: 16px;
-                right: 16px;
-            }
-        }
-
-        @media (max-width: 420px) {
-            .stat-box {
-                min-width: 80px;
-                padding: 12px 6px;
-            }
-
-            .stat-num {
-                font-size: 22px;
-            }
-
             .pledge-grid {
                 grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
             }
 
-            .contact-btns {
-                flex-direction: column;
-                align-items: center;
+            .section {
+                padding: 32px 16px;
             }
 
-            .contact-btn {
-                width: 100%;
-                max-width: 260px;
-                justify-content: center;
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            .testimonial-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="topbar">
+        📱 যোগাযোগের জন্য এখানে ক্লিক করুন | আপনার সমস্যার সমাধান আমরা করব
+    </div>
 
-<!-- ===== TOP BAR ===== -->
-    <div class="topbar">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْم — আল্লাহর নামে শুরু করছি</div>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 
-    <!-- ===== THEME TOGGLE ===== -->
-    <button class="theme-toggle" id="themeToggle" aria-label="থিম পরিবর্তন">🌙</button>
-
-    <!-- ===== NAVBAR ===== -->
+    <!-- Navbar -->
     <nav>
         <div class="nav-brand">
-            <img class="avatar" id="nav-photo" src="20260628_103827_0000.png" alt="প্রার্থী" />
+            <img src="1000100819.jpg" alt="Avatar" class="avatar" />
             <div class="nav-brand-text">
                 <div class="name">মোঃ জাহাঙ্গীর আলম</div>
-                <div class="seat">চেয়ারম্যান প্রার্থী · ১নং বদলগাছী ইউপি</div>
+                <div class="seat">১নং বদলগাছী ইউপি</div>
             </div>
         </div>
-        <div class="nav-links" id="navLinks">
-            <button onclick="showPage('home',this)" class="active">🏠 হোম</button>
-            <button onclick="showPage('profile',this)">👤 প্রোফাইল</button>
-            <button onclick="showPage('manifesto',this)">📋 ইশতেহার</button>
-            <button onclick="showPage('gallery',this)">🖼️ গ্যালারি</button>
-            <button onclick="showPage('contact',this)">📞 যোগাযোগ</button>
+        <div class="nav-links">
+            <button onclick="showPage('home')" class="active">🏠 হোম</button>
+            <button onclick="showPage('bio')">📝 জীবনী</button>
+            <button onclick="showPage('manifesto')">📋 ম্যানিফেস্টো</button>
+            <button onclick="showPage('gallery')">🖼️ গ্যালারি</button>
+            <button onclick="showPage('contact')">📞 যোগাযোগ</button>
         </div>
-        <div class="hamburger" onclick="toggleNav()" aria-label="মেনু">
-            <span></span><span></span><span></span>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </nav>
 
-    <!-- ===== HOME PAGE ===== -->
-    <div class="page active" id="page-home">
-
-        <!-- SLIDESHOW -->
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <!-- Slideshow -->
         <div class="slideshow-wrap">
-            <div class="slides" id="slidesTrack"></div>
-            <button class="slide-arrow left" onclick="moveSlide(-1)">‹</button>
-            <button class="slide-arrow right" onclick="moveSlide(1)">›</button>
-            <div class="slide-dots" id="slideDots"></div>
+            <div class="slides" id="slides">
+                <div class="slide">
+                    <div class="slide-bg" style="background-image: url('20260628_103827_0000.png')"></div>
+                    <div class="slide-content">
+                        <span class="slide-icon">🗳️</span>
+                        <h2 class="slide-title">আমাদের সাথে থাকুন</h2>
+                        <p class="slide-sub">একটি উন্নত বদলগাছী ইউপির জন্য আমাদের স্বপ্ন বাস্তবায়নে আপনার ভোট আমাদের শক্তি</p>
+                        <span class="slide-badge">২০২৬ চেয়ারম্যান নির্বাচন</span>
+                    </div>
+                </div>
+            </div>
+            <button class="slide-arrow left" onclick="slideChange(-1)">❮</button>
+            <button class="slide-arrow right" onclick="slideChange(1)">❯</button>
+            <div class="slide-dots" id="dots"></div>
         </div>
 
-        <!-- PROFILE STRIP -->
+        <!-- Profile Strip -->
         <div class="profile-strip">
-            <img class="profile-photo" id="homePhoto" src="20260628_103827_0000.png" alt="প্রার্থী" />
+            <img src="1000100819.jpg" alt="Profile" class="profile-photo" />
             <div class="profile-info">
-                <div class="bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْم</div>
-                <h1 id="candidateName">মোঃ জাহাঙ্গীর আলম</h1>
-                <div class="party-badge">বাংলাদেশ জামায়াতে ইসলামী মনোনীত</div>
-                <div class="post-label">চেয়ারম্যান পদপ্রার্থী · ১নং বদলগাছী ইউনিয়ন পরিষদ</div>
+                <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+                <h1>মোঃ জাহাঙ্গীর আলম</h1>
+                <span class="party-badge">স্বাধীন প্রার্থী</span>
+                <p class="post-label">চেয়ারম্যান প্রার্থী | ১নং বদলগ��ছী ইউপি</p>
             </div>
         </div>
 
-        <!-- STATS -->
+        <!-- Stats -->
         <div class="stats-row">
-            <div class="stat-box"><div class="stat-num" id="st1">২+</div><div class="stat-label">বার নির্বাচনে অংশগ্রহণ</div></div>
-            <div class="stat-box"><div class="stat-num" id="st2">১৫+</div><div class="stat-label">বছরের সমাজসেবা</div></div>
-            <div class="stat-box"><div class="stat-num" id="st3">১নং</div><div class="stat-label">বদলগাছী ইউপি</div></div>
-            <div class="stat-box"><div class="stat-num" id="st4">৯টি</div><div class="stat-label">ওয়ার্ড সেবায় প্রতিশ্রুতি</div></div>
-        </div>
-
-        <!-- COUNTDOWN -->
-        <div class="countdown-wrap reveal">
-            <h3>⏳ নির্বাচন পর্যন্ত বাকি</h3>
-            <div class="countdown" id="countdown">
-                <div class="countdown-item"><span class="num" id="cd-days">00</span><span class="label">দিন</span></div>
-                <div class="countdown-item"><span class="num" id="cd-hours">00</span><span class="label">ঘন্টা</span></div>
-                <div class="countdown-item"><span class="num" id="cd-mins">00</span><span class="label">মিনিট</span></div>
-                <div class="countdown-item"><span class="num" id="cd-secs">00</span><span class="label">সেকেন্ড</span></div>
+            <div class="stat-box">
+                <div class="stat-num">২৫+</div>
+                <div class="stat-label">বছরের অভিজ্ঞতা</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">১০০%</div>
+                <div class="stat-label">সততা এবং নিষ্ঠা</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">∞</div>
+                <div class="stat-label">জনসেবার প্রতিশ্রুতি</div>
             </div>
         </div>
 
-        <!-- PLEDGES -->
-        <div class="section">
-            <div class="section-title reveal">আমার প্রতিশ্রুতি</div>
-            <div class="section-sub reveal">ইনশাআল্লাহ — আপনাদের সাথে নিয়ে একটি উত্তম, শান্তিপূর্ণ ও সমৃদ্ধ ইউনিয়ন গড়ে তুলব</div>
+        <!-- Pledges -->
+        <div class="section reveal">
+            <h2 class="section-title">আমাদের প্রতিশ্রুতি</h2>
+            <p class="section-sub">আমরা নিম্নোক্ত বিষয়গুলিতে কাজ করতে প্রতিশ্রুতিবদ্ধ</p>
             <div class="pledge-grid">
-                <div class="pledge-card reveal"><div class="pledge-icon">🌱</div><div class="pledge-label">উন্নয়ন সবার জন্য</div></div>
-                <div class="pledge-card reveal"><div class="pledge-icon">⚖️</div><div class="pledge-label">স্বচ্ছতা ও জবাবদিহিতা</div></div>
-                <div class="pledge-card reveal"><div class="pledge-icon">🤝</div><div class="pledge-label">ঐক্য, শান্তি ও সম্প্রীতি</div></div>
-                <div class="pledge-card reveal"><div class="pledge-icon">🕌</div><div class="pledge-label">মডেল ও সেবামূলক ইউনিয়ন</div></div>
-                <div class="pledge-card reveal"><div class="pledge-icon">🏥</div><div class="pledge-label">স্বাস্থ্য সেবা নিশ্চিত</div></div>
-                <div class="pledge-card reveal"><div class="pledge-icon">📚</div><div class="pledge-label">শিক্ষার আলো ছড়াব</div></div>
-            </div>
-        </div>
-
-        <!-- QUOTE -->
-        <div class="quote-box reveal" id="quoteBox">
-            <div class="quote-text" id="quoteText">
-                গত দুইবার আমি বদলগাছী ইউনিয়ন পরিষদের চেয়ারম্যান পদে অংশগ্রহণ করেছিলাম, কিন্তু ফলাফলে জনগণের প্রত্যাশা পূরণ করতে পারিনি। তাই আসন্ন ইউনিয়ন পরিষদ নির্বাচনে আপনাদের দোয়া, সমর্থন ও ভোট প্রার্থনা করছি।
-            </div>
-            <div class="quote-attr">— মোঃ জাহাঙ্গীর আলম, চেয়ারম্যান প্রার্থী</div>
-        </div>
-
-        <!-- TESTIMONIALS -->
-        <div class="section">
-            <div class="section-title reveal">💬 সমর্থকদের মতামত</div>
-            <div class="section-sub reveal">আমাদের সাথে যারা আছেন, তাদের কিছু কথা</div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card reveal">
-                    <div class="quote">"জাহাঙ্গীর আলম ভাই একজন সৎ ও নিষ্ঠাবান মানুষ। তিনি বদলগাছীর উন্নয়নে আন্তরিক।"</div>
-                    <div class="author">— মোঃ আব্দুল করিম</div>
-                    <div class="location">বদলগাছী সদর</div>
+                <div class="pledge-card">
+                    <div class="pledge-icon">🏫</div>
+                    <div class="pledge-label">শিক্ষা উন্নয়ন</div>
                 </div>
-                <div class="testimonial-card reveal">
-                    <div class="quote">"আমি তাঁর উপর আস্থা রাখি। তিনি যদি চেয়ারম্যান হন, তাহলে এলাকার অনেক সমস্যার সমাধান হবে।"</div>
-                    <div class="author">— রাবেয়া খাতুন</div>
-                    <div class="location">পশ্চিম বদলগাছী</div>
+                <div class="pledge-card">
+                    <div class="pledge-icon">🏥</div>
+                    <div class="pledge-label">স্বাস্থ্যসেবা</div>
                 </div>
-                <div class="testimonial-card reveal">
-                    <div class="quote">"তরুণ প্রজন্মের জন্য তিনি অনেক কিছু করতে পারেন। আমাদের ভোট জাহাঙ্গীর আলম ভাইকে।"</div>
-                    <div class="author">— মোঃ সাইফুল ইসলাম</div>
-                    <div class="location">বদলগাছী বাজার</div>
+                <div class="pledge-card">
+                    <div class="pledge-icon">🛣️</div>
+                    <div class="pledge-label">সড়ক অবকাঠামো</div>
+                </div>
+                <div class="pledge-card">
+                    <div class="pledge-icon">💰</div>
+                    <div class="pledge-label">অর্থনৈতিক উন্নয়ন</div>
+                </div>
+                <div class="pledge-card">
+                    <div class="pledge-icon">🌳</div>
+                    <div class="pledge-label">পরিবেশ সংরক্ষণ</div>
+                </div>
+                <div class="pledge-card">
+                    <div class="pledge-icon">⚖️</div>
+                    <div class="pledge-label">ন্যায়বিচার নিশ্চিতকরণ</div>
                 </div>
             </div>
         </div>
-         <!-- VOTE SECTION -->
-        <div class="vote-section reveal">
-            <button class="vote-btn" id="voteBtn" onclick="handleVote()">🗳️ ভোট দিন</button>
-            <div class="vote-count" id="voteCount">মোট সমর্থক: ১,২৫৪ জন</div>
+
+        <!-- Quote -->
+        <div class="quote-box reveal">
+            <div class="quote-text">
+                "একটি সমৃদ্ধ এবং আধুনিক বদলগাছী ইউপি গড়ে তুলতে আমরা সর্বাত্মক চেষ্টা করব এবং জনগণের আস্থা রক্ষা করব।"
+            </div>
+            <div class="quote-attr">— মোঃ জাহাঙ্গীর আলম</div>
         </div>
 
-        <!-- CONTACT BAR -->
+        <!-- Countdown -->
+        <div class="countdown-wrap reveal">
+            <h3>নির্বাচন পর্যন্ত সময়</h3>
+            <div class="countdown" id="countdown"></div>
+        </div>
+
+        <!-- Contact Bar -->
         <div class="contact-bar reveal">
-            <h3>📲 প্রার্থীর সাথে যোগাযোগ করুন</h3>
+            <h3>📞 আমাদের সাথে যোগাযোগ করুন</h3>
             <div class="contact-btns">
-                <a href="tel:01762726068" class="contact-btn btn-call" id="callBtn">📞 ফোন করুন</a>
-                <a href="https://wa.me/8801762726068" class="contact-btn btn-wa" id="waBtn" target="_blank">💬 WhatsApp</a>
-                <a href="#" class="contact-btn btn-fb" id="fbBtn" target="_blank">📘 Facebook</a>
+                <a href="tel:+8801762726068" class="contact-btn btn-call">☎️ কল করুন</a>
+                <a href="https://wa.me/8801762726068" target="_blank" class="contact-btn btn-wa">💬 হোয়াটসঅ্যাপ</a>
             </div>
         </div>
 
-    </div><!-- /home -->
+        <!-- Vote Section -->
+        <div class="vote-section reveal">
+            <button class="vote-btn" onclick="alert('আপনার ভোটের জন্য ধন্যবাদ!')">🗳️ ভোট দিন</button>
+            <div class="vote-count">আপনার ভোট আমাদের ভবিষ্যৎ</div>
+        </div>
 
-    <!-- ===== PROFILE PAGE ===== -->
-    <div class="page" id="page-profile">
+        <!-- Testimonials -->
+        <div class="section reveal">
+            <h2 class="section-title">মানুষ কী বলে</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote">"জাহাঙ্গীর আলম সৎ এবং নিষ্ঠাবান নেতা। তিনি জনগণের কল্যাণে সর্বদা নিয়োজিত।"</div>
+                    <div class="author">— গ্রাম বাসী ১</div>
+                    <div class="location">বদলগাছী ইউপি</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"তার নেতৃত্বে আমাদের এলাকায় অনেক উন্নয়ন হয়েছে। আমরা তার উপর আস্থা রাখি।"</div>
+                    <div class="author">— গ্রাম বাসী ২</div>
+                    <div class="location">বদলগাছী ইউপি</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"তিনি মানুষের কথা শোনেন এবং সমস্যার সমাধান করেন। একজন প্রকৃত সেবক।"</div>
+                    <div class="author">— গ্রাম বাসী ৩</div>
+                    <div class="location">বদলগাছী ইউপি</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BIO PAGE -->
+    <div id="bio" class="page">
         <div class="bio-hero">
-            <img class="ph" id="bioPhoto" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230d4a2f'/%3E%3Ctext x='50' y='62' font-size='40' text-anchor='middle' fill='%23f0c040' font-family='sans-serif'%3E👤%3C/text%3E%3C/svg%3E" alt="প্রার্থী" />
-            <h2>মোঃ জাহাঙ্গীর আলম</h2>
-            <p>বিশিষ্ট সমাজসেবী, রাজনীতিবিদ ও মজলিসে শূরা সদস্য, নওগাঁ জেলা জামায়াত</p>
+            <img src="1000100819.jpg" alt="Profile" class="ph" />
+            <h2>আমার পরিচয়</h2>
+            <p>মোঃ জাহাঙ্গীর আলম - একজন নিবেদিত সেবক এবং স্বাধীন প্রার্থী</p>
         </div>
         <div class="bio-body">
-            <div class="bio-section reveal">
-                <h3>🧑‍💼 পরিচিতি</h3>
-                <p class="bio-text" id="bioText">মোঃ জাহাঙ্গীর আলম ১নং বদলগাছী ইউনিয়নের একজন পরিচিত সমাজসেবী ও নিবেদিতপ্রাণ রাজনীতিবিদ। তিনি বাংলাদেশ জামায়াতে ইসলামীর মনোনীত চেয়ারম্যান পদপ্রার্থী এবং নওগাঁ জেলা জামায়াতের মজলিসে শূরা সদস্য হিসেবে দীর্ঘদিন ধরে জনসেবায় নিয়োজিত আছেন। জনগণের আস্থা ও বিশ্বাস অর্জনই তাঁর মূল লক্ষ্য।</p>
+            <div class="bio-section">
+                <h3>ব্যক্তিগত তথ্য</h3>
+                <p class="bio-text">
+                    আমি মোঃ জাহাঙ্গীর আলম, বদলগাছী ইউপির একজন দায়িত্বশীল নাগরিক। আমার জীবনের লক্ষ্য হল আমার এলাকার মানুষের সেবা করা এবং একটি সুন্দর ভবিষ্যৎ গড়া। আমি বিশ্বাস করি যে সততা এবং কঠোর পরিশ্রমের মাধ্যমে যেকোনো লক্ষ্য অর্জন সম্ভব।
+                </p>
             </div>
-            <div class="bio-section reveal">
-                <h3>📅 রাজনৈতিক ও সামাজিক কার্যক্রম</h3>
-                <ul class="timeline" id="bioTimeline">
-                    <li><strong>মজলিসে শূরা সদস্য</strong>নওগাঁ জেলা জামায়াতে ইসলামীর গুরুত্বপূর্ণ পদে দায়িত্বরত</li>
-                    <li><strong>দুইবার চেয়ারম্যান প্রার্থী</strong>১নং বদলগাছী ইউনিয়ন পরিষদ নির্বাচনে অংশগ্রহণ</li>
-                    <li><strong>সমাজসেবা ও উন্নয়নকাজ</strong>ইউনিয়নের বিভিন্ন সামাজিক ও মানবিক কার্যক্রমে সক্রিয় ভূমিকা পালন</li>
-                    <li><strong>ঈদ-উল-আযহা শুভেচ্ছা প্রচারণা ২০২৬</strong>পবিত্র ঈদের শুভেচ্ছাসহ নির্বাচনী প্রচারণা শুরু</li>
+
+            <div class="bio-section">
+                <h3>পেশাগত অভিজ্ঞতা</h3>
+                <ul class="timeline">
+                    <li><strong>২০০০-২০০৫</strong> - সামাজিক কর্মকাণ্ডে অংশগ্রহণ</li>
+                    <li><strong>২০০৫-২০১০</strong> - গ্রাম উন্নয়ন প্রকল্পে নেতৃত্ব</li>
+                    <li><strong>২০১০-২০২০</strong> - স্থানীয় সংস্থার প্রতিষ্ঠাতা সদস্য</li>
+                    <li><strong>২০২০-বর্তমান</strong> - সম্প্রদায়ের নেতা হিসেবে কাজ করছি</li>
                 </ul>
             </div>
-            <div class="bio-section reveal">
-                <h3>🎯 দৃষ্টিভঙ্গি ও লক্ষ্য</h3>
-                <p class="bio-text">আল্লাহর উপর ভরসা রেখে ইনশাআল্লাহ তিনি প্রতিটি ওয়ার্ডে সমান উন্নয়ন নিশ্চিত করতে চান। তাঁর লক্ষ্য একটি স্বচ্ছ, জবাবদিহিমূলক ও সেবামুখী ইউনিয়ন পরিষদ গঠন করা।</p>
+
+            <div class="bio-section">
+                <h3>শিক্ষা এবং প্রশিক্ষণ</h3>
+                <p class="bio-text">
+                    আমি স্থানীয় বিদ্যালয়ে শিক্ষা গ্রহণ করেছি এবং বিভিন্ন সামাজিক ও প্রশাসনিক প্রশিক্ষণ কোর্সে অংশ নিয়েছি। আমার লক্ষ্য হল ক্রমাগত শিখা এবং উন্নত হওয়া যাতে আমি আরও ভালোভাবে আমার এলাকার মানুষের সেবা করতে পারি।
+                </p>
             </div>
         </div>
     </div>
 
-    <!-- ===== MANIFESTO PAGE ===== -->
-    <div class="page" id="page-manifesto">
+    <!-- MANIFESTO PAGE -->
+    <div id="manifesto" class="page">
         <div class="manifesto-hero">
-            <h2>📋 নির্বাচনী ইশতেহার</h2>
-            <p>মোঃ জাহাঙ্গীর আলম — ১নং বদলগাছী ইউনিয়ন পরিষদ চেয়ারম্যান প্রার্থী</p>
+            <h2>আমাদের ম্যানিফেস্টো</h2>
+            <p>বদলগাছী ইউপির সামগ্রিক উন্নয়নের জন্য আমাদের পরিকল্পনা</p>
         </div>
-        <div class="manifesto-body" id="manifestoBody"></div>
+        <div class="manifesto-body">
+            <div class="manifesto-item">
+                <div class="manifesto-num">১</div>
+                <div>
+                    <h4>শিক্ষা ক্ষেত্রে উন্নয়ন</h4>
+                    <p>সকল শিশুর জন্য মানসম্পন্ন শিক্ষা নিশ্চিত করা, শিক্ষা প্রতিষ্ঠানের অবকাঠামো উন্নয়ন এবং শিক্ষকদের প্রশিক্ষণের ব্যবস্থা করা।</p>
+                </div>
+            </div>
+
+            <div class="manifesto-item">
+                <div class="manifesto-num">২</div>
+                <div>
+                    <h4>স্বাস্থ্যসেবা সুবিধা</h4>
+                    <p>গ্রামীণ এলাকায় প্রাথমিক স্বাস্থ্যসেবা কেন্দ্র স্থাপন, নারী ও শিশু স্বাস্থ্য কর্মসূচি পরিচালনা এবং নিয়মিত স্বাস্থ্য শিবির আয়োজন।</p>
+                </div>
+            </div>
+
+            <div class="manifesto-item">
+                <div class="manifesto-num">৩</div>
+                <div>
+                    <h4>কৃষি ও জীবিকা উন্নয়ন</h4>
+                    <p>কৃষকদের জন্য আধুনিক কৃষি প্রযুক্তির প্রবর্তন, ক্ষুদ্র ঋণ কর্মসূচি এবং কৃষি পণ্যের সুষ্ঠু বিপণন নিশ্চিত করা।</p>
+                </div>
+            </div>
+
+            <div class="manifesto-item">
+                <div class="manifesto-num">৪</div>
+                <div>
+                    <h4>অবকাঠামো উন্নয়ন</h4>
+                    <p>সড়ক পরিবহন নেটওয়ার্ক সম্প্রসারণ, পানি সরবরাহ ও বিদ্যুৎ ব্যবস্থার উন্নয়ন এবং যোগাযোগ ব্যবস্থা উন্নত করা।</p>
+                </div>
+            </div>
+
+            <div class="manifesto-item">
+                <div class="manifesto-num">৫</div>
+                <div>
+                    <h4>পরিবেশ ও দুর্যোগ ব্যবস্থাপনা</h4>
+                    <p>পরিবেশ সংরক্ষণ কর্মসূচি পরিচালনা, বৃক্ষরোপণ অভিযান এবং প্রাকৃতিক দুর্যোগ মোকাবেলায় প্রস্তুতি নেওয়া।</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- ===== GALLERY PAGE ===== -->
-    <div class="page" id="page-gallery">
+    <!-- GALLERY PAGE -->
+    <div id="gallery" class="page">
         <div class="gallery-hero">
-            <h2>🖼️ ফটো গ্যালারি</h2>
+            <h2>আমাদের কার্যক্রমের ছবি</h2>
         </div>
         <div class="gallery-body">
-            <div class="gallery-grid" id="galleryGrid"></div>
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-card" onclick="openLightbox('1000100819.jpg')">
+                    <div class="gallery-thumb">📸</div>
+                    <div class="gallery-cap">সম্প্রদায় সেবা কার্যক্রম</div>
+                </div>
+                <div class="gallery-card" onclick="openLightbox('20260628_103827_0000.png')">
+                    <div class="gallery-thumb">📸</div>
+                    <div class="gallery-cap">জনসভা ও সমাবেশ</div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-thumb">📸</div>
+                    <div class="gallery-cap">শিক্ষা উদ্যোগ</div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-thumb">📸</div>
+                    <div class="gallery-cap">স্বাস্থ্য শিবির</div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- ===== LIGHTBOX ===== -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-        <img id="lightboxImg" src="" alt="বড় ছবি" />
-    </div>
-
-    <!-- ===== CONTACT PAGE ===== -->
-    <div class="page" id="page-contact">
-        <div class="bio-hero">
-            <h2>📞 যোগাযোগ করুন</h2>
-            <p>আপনার মতামত, অভিযোগ বা পরামর্শ সরাসরি প্রার্থীর কাছে পৌঁছে দিন</p>
-        </div>
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
         <div class="contact-page">
-            <div class="contact-card reveal">
-                <h3>📬 যোগাযোগের তথ্য</h3>
-                <div class="contact-row"><span class="ci">📞</span><div><div style="font-weight:600;color:var(--gray);font-size:13px">ফোন</div><a href="tel:+8801762726068" id="cPhone">০১৭৬২-৭২৬০৬৮</a></div></div>
-                <div class="contact-row"><span class="ci">💬</span><div><div style="font-weight:600;color:var(--gray);font-size:13px">WhatsApp</div><a href="https://wa.me/8801762726068" id="cWhatsapp" target="_blank">মেসেজ করুন</a></div></div>
-                <div class="contact-row"><span class="ci">📘</span><div><div style="font-weight:600;color:var(--gray);font-size:13px">Facebook</div><a href="#" id="cFacebook" target="_blank">Facebook পেজে যান</a></div></div>
-                <div class="contact-row"><span class="ci">📍</span><div><div style="font-weight:600;color:var(--gray);font-size:13px">ঠিকানা</div><span id="cAddress">১নং বদলগাছী ইউনিয়ন, বদলগাছী, নওগাঁ</span></div></div>
-            </div>
-            <div class="contact-card reveal">
-                <h3>✉️ বার্তা পাঠান</h3>
-                <div class="contact-form" id="msgForm">
-                    <input type="text" placeholder="আপনার নাম" id="msgName" />
-                    <input type="text" placeholder="ফোন নম্বর" id="msgPhone" />
-                    <textarea placeholder="আপনার বার্তা লিখুন..." id="msgMessage"></textarea>
-                    <button class="submit-btn" onclick="sendMsg()">বার্তা পাঠান →</button>
-                    <div class="form-msg" id="formMsg">✅ আপনার বার্তা পাঠানো হয়েছে। ধন্যবাদ!</div>
+            <div class="contact-card">
+                <h3>সরাসরি যোগাযোগ করুন</h3>
+                <p>আপনার যেকোনো প্রশ্ন, পরামর্শ বা অভিযোগ আমাদের কাছে জানান। আমরা সর্বদা আপনার সেবায় প্রস্তুত।</p>
+                <div class="contact-btns" style="margin-top: 20px;">
+                    <a href="tel:+8801762726068" class="contact-btn btn-call">☎️ কল করুন (+880 176 2726068)</a>
+                    <a href="https://wa.me/8801762726068" target="_blank" class="contact-btn btn-wa">💬 হোয়াটসঅ্যাপ (+880 176 2726068)</a>
                 </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>বার্তা পাঠান</h3>
+                <p>আমাদের সাথে আপনার মতামত এবং পরামর্শ শেয়ার করুন।</p>
+                <form onsubmit="handleSubmit(event)">
+                    <input type="text" class="contact-input" placeholder="আপনার নাম" required />
+                    <input type="email" class="contact-input" placeholder="আপনার ইমেইল" required />
+                    <textarea class="contact-input" placeholder="আপনার বার্তা" required></textarea>
+                    <button type="submit" class="submit-btn">বার্তা পাঠান</button>
+                </form>
+            </div>
+
+            <div class="contact-card">
+                <h3>অফিস তথ্য</h3>
+                <p><strong>ঠিকানা:</strong> বদলগাছী ইউপি, বিক্রমপুর, মুন্সিগঞ্জ</p>
+                <p><strong>ফোন:</strong> +880 176 2726068</p>
+                <p><strong>সময়:</strong> সোমবার - শুক্রবার, সকাল ৯টা - সন্ধ্যা ৫টা</p>
             </div>
         </div>
     </div>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <strong>মোঃ জাহাঙ্গীর আলম</strong> — চেয়ারম্যান প্রার্থী, ১নং বদলগাছী ইউনিয়ন পরিষদ<br />
-        বাংলাদেশ জামায়াতে ইসলামী মনোনীত | নওগাঁ জেলা<br /><br />
-        <span style="color:rgba(255,255,255,0.5);font-size:12px">প্রচারে: ১নং বদলগাছী ইউনিয়নের শুভাকাঙ্ক্ষীবৃন্দ</span>
-    </footer>
-
-    <!-- ===== ADMIN TRIGGER ===== -->
-    <button class="admin-trigger" onclick="openAdmin()" title="অ্যাডমিন প্যানেল">⚙️</button>
- <!-- ===== LOGIN MODAL ===== -->
-    <div id="login-overlay">
-        <div class="login-box">
-            <div class="lock-icon">🔐</div>
-            <h3>অ্যাডমিন লগইন</h3>
-            <p>অ্যাডমিন প্যানেলে প্রবেশ করতে<br />আপনার তথ্য দিন</p>
-            <div class="login-field">
-                <label>ইউজারনেম</label>
-                <input type="text" id="loginUser" placeholder="username" autocomplete="username" />
-            </div>
-            <div class="login-field">
-                <label>পাসওয়ার্ড</label>
-                <input type="password" id="loginPass" placeholder="password" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()" />
-            </div>
-            <button class="login-btn" onclick="doLogin()">🔓 লগইন করুন</button>
-            <div class="login-error" id="loginError">❌ ইউজারনেম বা পাসওয়ার্ড সঠিক নয়!</div>
-            <button class="login-cancel" onclick="closeLogin()">বাতিল করুন</button>
-        </div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img id="lightbox-img" src="" alt="" />
     </div>
 
-    <!-- ===== ADMIN PANEL ===== -->
-    <div id="admin-overlay">
-        <div class="admin-panel">
-            <h2>⚙️ অ্যাডমিন প্যানেল <button class="admin-close" onclick="closeAdmin()">×</button></h2>
-
-            <!-- Slideshow -->
-            <div class="admin-section">
-                <h3>📸 স্লাইডশো পরিচালনা</h3>
-                <div class="slide-list" id="adminSlideList"></div>
-                <div style="margin-top:16px;border-top:1px solid rgba(0,0,0,0.06);padding-top:16px;">
-                    <p style="font-size:14px;font-weight:700;color:var(--primary);margin-bottom:12px;">+ নতুন স্লাইড যোগ করুন</p>
-                    <div class="admin-field">
-                        <label>ইভেন্টের ছবি আপলোড করুন</label>
-                        <div class="img-upload-area" onclick="document.getElementById('ns_img').click()">
-                            <input type="file" id="ns_img" accept="image/*" onchange="previewSlideImg(this)" />
-                            <div class="up-icon">📁</div>
-                            <p>ছবি বেছে নিন (JPG/PNG)</p>
-                        </div>
-                        <img id="ns_preview" class="img-preview" alt="preview" />
-                    </div>
-                    <div class="admin-field"><label>ইভেন্টের শিরোনাম</label><input id="ns_title" placeholder="যেমন: জনসভা — বদলগাছী বাজার" /></div>
-                    <div class="admin-field"><label>বিবরণ (ঐচ্ছিক)</label><textarea id="ns_sub" placeholder="ইভেন্ট সম্পর্কে সংক্ষেপে লিখুন..."></textarea></div>
-                    <div class="admin-field"><label>ব্যাজ টেক্সট (ঐচ্ছিক)</label><input id="ns_badge" placeholder="যেমন: ৫০০+ মানুষের অংশগ্রহণ" /></div>
-                    <button class="admin-btn" onclick="addSlide()">📸 স্লাইড যোগ করুন</button>
-                </div>
-            </div>
-
-            <!-- Profile -->
-            <div class="admin-section">
-                <h3>👤 প্রার্থীর তথ্য সম্পাদনা</h3>
-                <div class="admin-field"><label>প্রার্থীর নাম</label><input id="aName" value="মোঃ জাহাঙ্গীর আলম" /></div>
-                <div class="admin-field"><label>ফোন নম্বর</label><input id="aPhone" value="01762726068" /></div>
-                <div class="admin-field"><label>WhatsApp লিংক</label><input id="aWa" value="https://wa.me/8801762726068" /></div>
-                <div class="admin-field"><label>Facebook লিংক</label><input id="aFb" value="#" /></div>
-                <div class="admin-field"><label>ঠিকানা</label><input id="aAddr" value="১নং বদলগাছী ইউনিয়ন, বদলগাছী, নওগাঁ" /></div>
-                <div class="admin-field"><label>প্রার্থীর ছবি (URL)</label><input id="aPhoto" placeholder="ছবির URL দিন" /></div>
-                <button class="admin-btn" onclick="saveProfile()">✅ তথ্য সংরক্ষণ করুন</button>
-            </div>
-
-            <!-- Quote -->
-            <div class="admin-section">
-                <h3>💬 উদ্ধৃতি সম্পাদনা</h3>
-                <div class="admin-field"><label>উদ্ধৃতি টেক্সট</label>
-                    <textarea id="aQuote">গত দুইবার আমি বদলগাছী ইউনিয়ন পরিষদের চেয়ারম্যান পদে অংশগ্রহণ করেছিলাম, কিন্তু ফলাফলে জনগণের প্রত্যাশা পূরণ করতে পারিনি। তাই আসন্ন ইউনিয়ন পরিষদ নির্বাচনে আপনাদের দোয়া, সমর্থন ও ভোট প্রার্থনা করছি।</textarea>
-                </div>
-                <button class="admin-btn" onclick="saveQuote()">✅ সংরক্ষণ করুন</button>
-            </div>
-
-            <!-- Manifesto -->
-            <div class="admin-section">
-                <h3>📋 ইশতেহার যোগ করুন</h3>
-                <div class="admin-field"><label>বিষয়</label><input id="mTitle" placeholder="যেমন: শিক্ষা উন্নয়ন" /></div>
-                <div class="admin-field"><label>বিবরণ</label><textarea id="mDesc" placeholder="পরিকল্পনার বিস্তারিত লিখুন"></textarea></div>
-                <button class="admin-btn" onclick="addManifesto()">+ ইশতেহার যোগ করুন</button>
-            </div>
-
-            <!-- Gallery -->
-            <div class="admin-section">
-                <h3>🖼️ গ্যালারি ছবি যোগ করুন</h3>
-                <div class="admin-field"><label>ছবির URL</label><input id="gUrl" placeholder="https://..." /></div>
-                <div class="admin-field"><label>ক্যাপশন</label><input id="gCap" placeholder="ছবির বিবরণ" /></div>
-                <button class="admin-btn" onclick="addGalleryItem()">+ ছবি যোগ করুন</button>
-            </div>
-
-            <div class="admin-save-notice" id="adminNotice">✅ পরিবর্তন সংরক্ষিত হয়েছে</div>
-        </div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // ===== DATA STORE =====
-        let data = {
-            slides: [
-                { img: '', icon: '🕌', title: 'পবিত্র ঈদ-উল-আযহার শুভেচ্ছা', sub: 'আপনি ও আপনার পরিবারের সকলকে জানাই পবিত্র ঈদ-উল-আযহার প্রাণঢালা শুভেচ্ছা।', badge: 'ঈদ মোবারক 🌙' },
-                { img: '', icon: '📢', title: 'আসন্ন নির্বাচনে আপনার ভোট চাই', sub: '১নং বদলগাছী ইউনিয়ন পরিষদ চেয়ারম্যান নির্বাচনে আপনাদের দোয়া ও সমর্থন প্রত্যাশা করছি।', badge: 'ভোট দিন ✅' },
-                { img: '', icon: '🤲', title: 'আপনাদের দোয়া ও সমর্থন চাই', sub: 'আল্লাহ তায়ালার রহমত ও আপনাদের ভালোবাসাই আমার সবচেয়ে বড় শক্তি।', badge: 'একসাথে এগিয়ে যাই 💪' }
-            ],
-            manifesto: [
-                { title: 'যোগাযোগ ও অবকাঠামো উন্নয়ন', desc: 'সকল ওয়ার্ডে রাস্তা-ঘাট, ব্রিজ ও কালভার্ট নির্মাণ এবং সংস্কার করা হবে।' },
-                { title: 'শিক্ষা ও মেধা বিকাশ', desc: 'প্রতিটি শিক্ষা প্রতিষ্ঠানের মানোন্নয়ন, মেধাবী ছাত্রছাত্রীদের বৃত্তি প্রদান।' },
-                { title: 'স্বাস্থ্য সেবা নিশ্চিতকরণ', desc: 'কমিউনিটি ক্লিনিকের কার্যকর পরিচালনা, দরিদ্র পরিবারগুলোর জন্য বিনামূল্যে স্বাস্থ্য সেবা।' },
-                { title: 'কৃষি ও অর্থনৈতিক উন্নয়ন', desc: 'কৃষকদের ন্যায্য মূল্য প্রাপ্তি, সেচ ব্যবস্থার উন্নয়ন এবং কর্মসংস্থান সৃষ্টি।' },
-                { title: 'সামাজিক নিরাপত্তা', desc: 'বিধবা ভাতা, বয়স্ক ভাতা এবং অসহায় মানুষদের সরকারি সুবিধা যথাযথভাবে পৌঁছে দেওয়া।' },
-                { title: 'স্বচ্ছ প্রশাসন', desc: 'ইউনিয়ন পরিষদের সকল কার্যক্রম স্বচ্ছ ও জবাবদিহিমূলক হবে।' }
-            ],
-            gallery: [
-                { url: '', cap: 'নির্বাচনী পোস্টার প্রচারণা', icon: '📢' },
-                { url: '', cap: 'ঈদ শুভেচ্ছা কার্যক্রম', icon: '🌙' },
-                { url: '', cap: 'জনসংযোগ সভা', icon: '🤝' },
-                { url: '', cap: 'সমাজসেবামূলক কার্যক্রম', icon: '🌿' }
-            ],
-            contact: {
-                phone: '০১৭৬২৭২৬০৬৮',
-                phoneHref: '01762726068',
-                wa: 'https://wa.me/8801762726068',
-                fb: '#',
-                address: '১নং বদলগাছী ইউনিয়ন, বদলগাছী, নওগাঁ'
-            },
-            photo: '',
-            quote: 'গত দুইবার আমি বদলগাছী ইউনিয়ন পরিষদের চেয়ারম্যান পদে অংশগ্রহণ করেছিলাম, কিন্তু ফলাফলে জনগণের প্রত্যাশা পূরণ করতে পারিনি। তাই আসন্ন ইউনিয়ন পরিষদ নির্বাচনে আপনাদের দোয়া, সমর্থন ও ভোট প্রার্থনা করছি।'
-        };
-
-        // Load from localStorage
-        try {
-            const saved = localStorage.getItem('jahangir_data');
-            if (saved) data = JSON.parse(saved);
-        } catch (e) {}
-
-        function save() {
-            try { localStorage.setItem('jahangir_data', JSON.stringify(data)); } catch (e) {}
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? '☀️' : '🌙';
         }
 
-        // ===== THEME =====
-        let darkMode = localStorage.getItem('theme') === 'dark';
-
-        function applyTheme() {
-            document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-            document.getElementById('themeToggle').textContent = darkMode ? '☀️' : '🌙';
-            localStorage.setItem('theme', darkMode ? 'dark' : 'light');
-        }
-
-        document.getElementById('themeToggle').addEventListener('click', () => {
-            darkMode = !darkMode;
-            applyTheme();
+        // Load saved theme
+        window.addEventListener('load', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.querySelector('.theme-toggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
         });
-        applyTheme();
 
-        // ===== COUNTDOWN =====
-        function updateCountdown() {
-            const target = new Date('2026-06-15T00:00:00').getTime();
-            const now = Date.now();
-            let diff = Math.max(0, target - now);
-
-            const days = Math.floor(diff / 86400000);
-            diff -= days * 86400000;
-            const hours = Math.floor(diff / 3600000);
-            diff -= hours * 3600000;
-            const mins = Math.floor(diff / 60000);
-            diff -= mins * 60000;
-            const secs = Math.floor(diff / 1000);
-
-            document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
-            document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
-            document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+        // Page Navigation
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            window.scrollTo(0, 0);
         }
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
 
-        // ===== SCROLL REVEAL =====
-        function revealOnScroll() {
-            document.querySelectorAll('.reveal').forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 80) {
-                    el.classList.add('visible');
-                }
+        // Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Slideshow
+        let currentSlide = 0;
+        function slideChange(n) {
+            const slides = document.querySelectorAll('.slide');
+            currentSlide = (currentSlide + n + slides.length) % slides.length;
+            updateSlideshow();
+        }
+
+        function updateSlideshow() {
+            const slides = document.querySelectorAll('.slide');
+            const slideWidth = slides[0].offsetWidth;
+            document.getElementById('slides').style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+            
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
             });
         }
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll);
 
-        // ===== VOTE =====
-        let voteCount = 1254;
+        // Initialize slideshow
+        window.addEventListener('load', () => {
+            const slides = document.querySelectorAll('.slide');
+            const dotsContainer = document.getElementById('dots');
+            slides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.onclick = () => {
+                    currentSlide = i;
+                    updateSlideshow();
+                };
+                dotsContainer.appendChild(dot);
+            });
+        });
 
-        function handleVote() {
-            voteCount++;
-            document.getElementById('voteCount').textContent = `মোট সমর্থক: ${voteCount.toLocaleString()} জন`;
-            const btn = document.getElementById('voteBtn');
-            btn.textContent = '✅ ধন্যবাদ!';
-            btn.style.background = '#27ae60';
-            btn.style.color = '#fff';
-            setTimeout(() => {
-                btn.textContent = '🗳️ ভোট দিন';
-                btn.style.background = '';
-                btn.style.color = '';
-            }, 3000);
+        // Countdown Timer
+        function updateCountdown() {
+            const electionDate = new Date('2026-12-31').getTime();
+            const now = new Date().getTime();
+            const distance = electionDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `
+                <div class="countdown-item">
+                    <span class="num">${days}</span>
+                    <span class="label">দিন</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="num">${hours}</span>
+                    <span class="label">ঘন্টা</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="num">${minutes}</span>
+                    <span class="label">মিনিট</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="num">${seconds}</span>
+                    <span class="label">সেকেন্ড</span>
+                </div>
+            `;
         }
 
-        // ===== LIGHTBOX =====
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Reveal Animation
+        const reveals = document.querySelectorAll('.reveal');
+        window.addEventListener('scroll', () => {
+            reveals.forEach(reveal => {
+                if (reveal.getBoundingClientRect().top < window.innerHeight - 50) {
+                    reveal.classList.add('visible');
+                }
+            });
+        });
+
+        // Lightbox
         function openLightbox(src) {
-            document.getElementById('lightboxImg').src = src;
             document.getElementById('lightbox').classList.add('open');
+            document.getElementById('lightbox-img').src = src;
         }
 
         function closeLightbox() {
             document.getElementById('lightbox').classList.remove('open');
         }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
 
-        // ===== SLIDESHOW =====
-        let curSlide = 0,
-            slideTimer;
-
-        function renderSlides() {
-            const track = document.getElementById('slidesTrack');
-            const dots = document.getElementById('slideDots');
-            track.innerHTML = '';
-            dots.innerHTML = '';
-            data.slides.forEach((s, i) => {
-                const hasPic = !!s.img;
-                track.innerHTML += `<div class="slide">
-              <div class="slide-bg" style="background-image:${hasPic ? `url('${s.img}')` : 'linear-gradient(135deg, #0d4a2f, #1a6b40)'}"></div>
-              <div class="slide-content">
-                ${!hasPic ? `<span class="slide-icon">${s.icon || '📸'}</span>` : ''}
-                <div class="slide-title">${s.title}</div>
-                ${s.sub ? `<div class="slide-sub">${s.sub}</div>` : ''}
-                ${s.badge ? `<div class="slide-badge">${s.badge}</div>` : ''}
-              </div>
-            </div>`;
-                dots.innerHTML += `<div class="dot${i === 0 ? ' active' : ''}" onclick="goSlide(${i})"></div>`;
-            });
-            goSlide(0);
+        // Form Submit
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('আপনার বার্তা আমাদের কাছে পৌঁছেছে। আমরা শীঘ্রই যোগাযোগ করব। ধন্যবাদ!');
+            e.target.reset();
         }
-
-        function goSlide(n) {
-            curSlide = (n + data.slides.length) % data.slides.length;
-            document.getElementById('slidesTrack').style.transform = `translateX(-${curSlide * 100}%)`;
-            document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === curSlide));
-            clearInterval(slideTimer);
-            slideTimer = setInterval(() => moveSlide(1), 4500);
-        }
-
-        function moveSlide(d) { goSlide(curSlide + d); }
-// ===== PAGES =====
-        function showPage(name, btn) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById('page-' + name).classList.add('active');
-            document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
-            if (btn) btn.classList.add('active');
-            document.getElementById('navLinks').classList.remove('open');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            setTimeout(revealOnScroll, 200);
-        }
-
-        function toggleNav() {
-            document.getElementById('navLinks').classList.toggle('open');
-        }
-
-        // ===== MANIFESTO =====
-        function renderManifesto() {
-            const body = document.getElementById('manifestoBody');
-            body.innerHTML = data.manifesto.map((m, i) =>
-                `<div class="manifesto-item reveal">
-              <div class="manifesto-num">${String(i + 1).padStart(2, '০')}</div>
-              <div><h4>${m.title}</h4><p>${m.desc}</p></div>
-            </div>`
-            ).join('');
-        }
-
-        // ===== GALLERY =====
-        function renderGallery() {
-            const grid = document.getElementById('galleryGrid');
-            grid.innerHTML = data.gallery.map((g) =>
-                `<div class="gallery-card" onclick="openLightbox('${g.url || ''}')">
-              ${g.url
-                ? `<img src="${g.url}" class="gallery-thumb" alt="${g.cap}" onerror="this.outerHTML='<div class=gallery-thumb>${g.icon || '🖼️'}</div>'" />`
-                : `<div class="gallery-thumb">${g.icon || '🖼️'}</div>`
-              }
-              <div class="gallery-cap">${g.cap}</div>
-            </div>`
-            ).join('');
-        }
-
-        // ===== CONTACT =====
-        function renderContact() {
-            const c = data.contact;
-            document.getElementById('callBtn').href = `tel:${c.phoneHref || c.phone}`;
-            document.getElementById('waBtn').href = c.wa;
-            document.getElementById('fbBtn').href = c.fb;
-            document.getElementById('cPhone').textContent = c.phone;
-            document.getElementById('cPhone').href = `tel:${c.phoneHref || c.phone}`;
-            document.getElementById('cWhatsapp').href = c.wa;
-            document.getElementById('cFacebook').href = c.fb;
-            document.getElementById('cAddress').textContent = c.address;
-        }
-
-        // ===== PHOTO =====
-        function renderPhoto() {
-            if (!data.photo) return;
-            const img = `<img src="${data.photo}" alt="প্রার্থী" style="width:100%;height:100%;object-fit:cover;border-radius:50%" onerror="this.parentElement.textContent='👤'" />`;
-            ['homePhoto', 'bioPhoto', 'nav-photo'].forEach(id => {
-                const el = document.getElementById(id);
-                if (el) el.outerHTML = img;
-            });
-        }
-
-        // ===== QUOTE =====
-        function renderQuote() {
-            document.getElementById('quoteText').textContent = data.quote;
-        }
-
-        // ===== ADMIN AUTH =====
-        const ADMIN_USER = 'admin';
-        const ADMIN_PASS = 'admin123';
-        let adminLoggedIn = false;
-
-        function openAdmin() {
-            if (adminLoggedIn) {
-                document.getElementById('admin-overlay').classList.add('open');
-                renderAdminSlides();
-            } else {
-                document.getElementById('loginUser').value = '';
-                document.getElementById('loginPass').value = '';
-                document.getElementById('loginError').style.display = 'none';
-                document.getElementById('login-overlay').classList.add('open');
-                setTimeout(() => document.getElementById('loginUser').focus(), 100);
-            }
-        }
-
-        function closeAdmin() { document.getElementById('admin-overlay').classList.remove('open'); }
-
-        function closeLogin() { document.getElementById('login-overlay').classList.remove('open'); }
-
-        function doLogin() {
-            const u = document.getElementById('loginUser').value.trim();
-            const p = document.getElementById('loginPass').value;
-            if (u === ADMIN_USER && p === ADMIN_PASS) {
-                adminLoggedIn = true;
-                closeLogin();
-                document.getElementById('admin-overlay').classList.add('open');
-                renderAdminSlides();
-            } else {
-                const err = document.getElementById('loginError');
-                err.style.display = 'block';
-                document.getElementById('loginPass').value = '';
-                document.getElementById('loginPass').focus();
-                setTimeout(() => err.style.display = 'none', 3000);
-            }
-        }
-
-        document.getElementById('login-overlay').addEventListener('click', function(e) {
-            if (e.target === this) closeLogin();
-        });
-        document.getElementById('admin-overlay').addEventListener('click', function(e) {
-            if (e.target === this) closeAdmin();
-        });
-
-        function previewSlideImg(input) {
-            const file = input.files[0];
-            if (!file) return;
-            const reader = new FileReader();
-            reader.onload = e => {
-                const prev = document.getElementById('ns_preview');
-                prev.src = e.target.result;
-                prev.style.display = 'block';
-            };
-            reader.readAsDataURL(file);
-        }
-
-        function renderAdminSlides() {
-            const list = document.getElementById('adminSlideList');
-            if (data.slides.length === 0) {
-                list.innerHTML = '<p style="font-size:13px;color:var(--gray);text-align:center;padding:10px">এখনো কোনো স্লাইড নেই</p>';
-                return;
-            }
-            list.innerHTML = data.slides.map((s, i) =>
-                `<div class="slide-edit-row">
-              <div style="display:flex;align-items:center;gap:10px">
-                ${s.img ? `<img src="${s.img}" style="width:44px;height:36px;object-fit:cover;border-radius:6px;flex-shrink:0" />` : '<div style="width:44px;height:36px;background:var(--cream);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:18px">📸</div>'}
-                <div class="stitle">${s.title}</div>
-              </div>
-              <div class="row-btns">
-                <button class="mini-btn del" onclick="deleteSlide(${i})">🗑️</button>
-              </div>
-            </div>`
-            ).join('');
-        }
-
-        function addSlide() {
-            const t = document.getElementById('ns_title').value.trim();
-            const s = document.getElementById('ns_sub').value.trim();
-            const b = document.getElementById('ns_badge').value.trim();
-            const prev = document.getElementById('ns_preview');
-            const img = prev.style.display !== 'none' ? prev.src : '';
-            if (!t) { alert('শিরোনাম দিন'); return; }
-            data.slides.push({ img, title: t, sub: s, badge: b });
-            save();
-            renderSlides();
-            renderAdminSlides();
-            document.getElementById('ns_title').value = '';
-            document.getElementById('ns_sub').value = '';
-            document.getElementById('ns_badge').value = '';
-            document.getElementById('ns_img').value = '';
-            prev.src = '';
-            prev.style.display = 'none';
-            showNotice();
-        }
-
-        function deleteSlide(i) {
-            if (!confirm('এই স্লাইডটি মুছবেন?')) return;
-            data.slides.splice(i, 1);
-            save();
-            renderSlides();
-            renderAdminSlides();
-            showNotice();
-        }
-
-        function saveProfile() {
-            data.contact.phone = document.getElementById('aPhone').value;
-            data.contact.phoneHref = document.getElementById('aPhone').value.replace(/[^0-9]/g, '');
-            data.contact.wa = document.getElementById('aWa').value;
-            data.contact.fb = document.getElementById('aFb').value;
-            data.contact.address = document.getElementById('aAddr').value;
-            data.photo = document.getElementById('aPhoto').value;
-            document.getElementById('candidateName').textContent = document.getElementById('aName').value;
-            save();
-            renderContact();
-            renderPhoto();
-            showNotice();
-        }
-
-        function saveQuote() {
-            data.quote = document.getElementById('aQuote').value;
-            save();
-            renderQuote();
-            showNotice();
-        }
-
-        function addManifesto() {
-            const t = document.getElementById('mTitle').value.trim();
-            const d = document.getElementById('mDesc').value.trim();
-            if (!t) { alert('বিষয় দিন'); return; }
-            data.manifesto.push({ title: t, desc: d });
-            save();
-            renderManifesto();
-            document.getElementById('mTitle').value = '';
-            document.getElementById('mDesc').value = '';
-            showNotice();
-        }
-
-        function addGalleryItem() {
-            const u = document.getElementById('gUrl').value.trim();
-            const c = document.getElementById('gCap').value.trim() || 'ছবি';
-            data.gallery.push({ url: u, cap: c, icon: '🖼️' });
-            save();
-            renderGallery();
-            document.getElementById('gUrl').value = '';
-            document.getElementById('gCap').value = '';
-            showNotice();
-        }
-
-        function showNotice() {
-            const n = document.getElementById('adminNotice');
-            n.style.display = 'block';
-            setTimeout(() => n.style.display = 'none', 2500);
-        }
-
-        // ===== CONTACT FORM =====
-        function sendMsg() {
-            const name = document.getElementById('msgName').value.trim();
-            const msg = document.getElementById('msgMessage').value.trim();
-            if (!name || !msg) {
-                alert('দয়া করে আপনার নাম ও বার্তা লিখুন।');
-                return;
-            }
-            document.getElementById('formMsg').style.display = 'block';
-            document.getElementById('msgName').value = '';
-            document.getElementById('msgPhone').value = '';
-            document.getElementById('msgMessage').value = '';
-            setTimeout(() => document.getElementById('formMsg').style.display = 'none', 4000);
-        }
-
-        // ===== INIT =====
-        renderSlides();
-        renderManifesto();
-        renderGallery();
-        renderContact();
-        renderPhoto();
-        renderQuote();
-        renderAdminSlides();
-        slideTimer = setInterval(() => moveSlide(1), 4500);
     </script>
-
 </body>
 </html>
